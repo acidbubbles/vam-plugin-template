@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        "*.zip": true,
+        "bin": true,
+        "obj": true,
+        "publish": true
+    }
+}
