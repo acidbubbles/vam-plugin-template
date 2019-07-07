@@ -26,6 +26,9 @@
     <Reference Include="UnityEngine.AnimationModule">
       <HintPath>../../../../VaM_Data/Managed/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>../../../../VaM_Data/Managed/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>../../../../VaM_Data/Managed/Assembly-CSharp.dll</HintPath>
     </Reference>
