@@ -3,9 +3,24 @@
   xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
-    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFramework>net45</TargetFramework>
+    <OutputType>Library</OutputType>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Platform)' == 'Unity' ">
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +38,12 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>../../../../VaM_Data/Managed/UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>../../../../VaM_Data/Managed/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>../../../../VaM_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AnimationModule">
       <HintPath>../../../../VaM_Data/Managed/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
@@ -35,7 +56,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="src/MyPlugin.cs" />
+    <Compile Include="MyPlugin.cs" />
   </ItemGroup>
 
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
