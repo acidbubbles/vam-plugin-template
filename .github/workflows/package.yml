@@ -19,10 +19,9 @@ jobs:
       id: zip
       run: |
         mkdir -p publish/Custom/Scripts/Author/MyPlugin
-        cp -r src publish/Custom/Scripts/Author/MyPlugin/
-        cp *.cslist publish/Custom/Scripts/Author/MyPlugin/
-        cp vam/meta.json publish/
-        sed -i 's/v0.0.0/${{ steps.get_version.outputs.VERSION }}/ publish/meta.json'
+        cp *.cs publish/Custom/Scripts/Author/MyPlugin/
+        cp meta.json publish/
+        sed -i 's/v0.0.0/${{ steps.get_version.outputs.VERSION }}/' publish/meta.json
         cd publish
         zip -r "Author.MyPlugin.${{ github.run_number }}.var" *
     - name: GitHub release

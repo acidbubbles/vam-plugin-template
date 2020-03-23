@@ -1,0 +1,16 @@
+{ 
+   "licenseType" : "CC BY-SA", 
+   "creatorName" : "Author", 
+   "packageName" : "MyPlugin", 
+   "includeVersionsInReferences" : "true", 
+   "description" : "v0.0.0 MyPlugin Description", 
+   "credits" : "", 
+   "instructions" : "", 
+   "promotionalLink" : "https://github.com/author/my-plugin", 
+   "programVersion" : "1.19.0.5", 
+   "contentList" : [ 
+      "Custom\\Scripts\\Author\\MyPlugin\\MyPlugin.cs"
+   ], 
+   "dependencies" : { 
+   }
+}
