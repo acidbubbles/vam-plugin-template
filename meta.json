@@ -6,7 +6,7 @@
    "description" : "v0.0.0 MyPlugin Description", 
    "credits" : "", 
    "instructions" : "", 
-   "promotionalLink" : "https://github.com/author/my-plugin", 
+   "promotionalLink" : "https://github.com/Author/MyPlugin", 
    "programVersion" : "1.19.0.5", 
    "contentList" : [ 
       "Custom\\Scripts\\Author\\MyPlugin\\MyPlugin.cs"
