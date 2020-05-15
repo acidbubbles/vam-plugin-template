@@ -6,11 +6,47 @@ public class MyPlugin : MVRScript
     {
         try
         {
-            SuperController.LogMessage("Plugin installed");
+            SuperController.LogMessage($"{nameof(MyPlugin)} initialized");
         }
         catch (Exception e)
         {
-            SuperController.LogError("Failed to initialize plugin: " + e);
+            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(Init)}: {e}");
+        }
+    }
+
+    public void OnEnable()
+    {
+        try
+        {
+            SuperController.LogMessage($"{nameof(MyPlugin)} enabled");
+        }
+        catch (Exception e)
+        {
+            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(Init)}: {e}");
+        }
+    }
+
+    public void OnDisable()
+    {
+        try
+        {
+            SuperController.LogMessage($"{nameof(MyPlugin)} disabled");
+        }
+        catch (Exception e)
+        {
+            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(Init)}: {e}");
+        }
+    }
+
+    public void OnDestroy()
+    {
+        try
+        {
+            SuperController.LogMessage($"{nameof(MyPlugin)} destroyed");
+        }
+        catch (Exception e)
+        {
+            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(Init)}: {e}");
         }
     }
 }
