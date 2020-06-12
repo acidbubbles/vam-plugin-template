@@ -6,6 +6,7 @@
     <TargetFramework>net45</TargetFramework>
     <OutputType>Library</OutputType>
     <LangVersion>6</LangVersion>
+    <VAM_Dir>../../../../</VAM_Dir>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Platform)' == 'Unity' ">
@@ -30,34 +31,34 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="UnityEngine">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.UI.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.UIModule.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.AnimationModule.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.AnimationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AudioModule">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.AudioModule.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.AudioModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>../../../../VaM_Data/Managed/UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>../../../../VaM_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <HintPath>$(VAM_Dir)VaM_Data/Managed/Assembly-CSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
 
