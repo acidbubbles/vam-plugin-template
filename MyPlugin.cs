@@ -22,7 +22,7 @@ public class MyPlugin : MVRScript
         }
         catch (Exception e)
         {
-            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(Init)}: {e}");
+            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(OnEnable)}: {e}");
         }
     }
 
@@ -34,7 +34,7 @@ public class MyPlugin : MVRScript
         }
         catch (Exception e)
         {
-            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(Init)}: {e}");
+            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(OnDisable)}: {e}");
         }
     }
 
@@ -46,7 +46,7 @@ public class MyPlugin : MVRScript
         }
         catch (Exception e)
         {
-            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(Init)}: {e}");
+            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(OnDestroy)}: {e}");
         }
     }
 }
