@@ -1,52 +1,16 @@
-using System;
-
 public class MyPlugin : MVRScript
 {
+    private JSONStorableBool _myValueJSON;
+
     public override void Init()
     {
-        try
-        {
-            SuperController.LogMessage($"{nameof(MyPlugin)} initialized");
-        }
-        catch (Exception e)
-        {
-            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(Init)}: {e}");
-        }
-    }
-
-    public void OnEnable()
-    {
-        try
-        {
-            SuperController.LogMessage($"{nameof(MyPlugin)} enabled");
-        }
-        catch (Exception e)
-        {
-            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(OnEnable)}: {e}");
-        }
-    }
-
-    public void OnDisable()
-    {
-        try
-        {
-            SuperController.LogMessage($"{nameof(MyPlugin)} disabled");
-        }
-        catch (Exception e)
-        {
-            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(OnDisable)}: {e}");
-        }
-    }
-
-    public void OnDestroy()
-    {
-        try
-        {
-            SuperController.LogMessage($"{nameof(MyPlugin)} destroyed");
-        }
-        catch (Exception e)
-        {
-            SuperController.LogError($"{nameof(MyPlugin)}.{nameof(OnDestroy)}: {e}");
-        }
+        // Example storable; you can also create string, float and action JSON storables
+        _myValueJSON = new JSONStorableBool("My Storable", false);
+        // You can listen to changes
+        _myValueJSON.setCallbackFunction = (bool val) => SuperController.LogMessage($"MyPlugin: Received {val}");
+        // You can use Register* methods to make your storable triggerable, and save and restore the value with the scene
+        RegisterBool(_myValueJSON);
+        // You can use Create* methods to add a control in the plugin's custom UI
+        CreateToggle(_myValueJSON);
     }
 }
