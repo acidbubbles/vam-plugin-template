@@ -24,9 +24,15 @@ You should now be able to open the project in vscode by using `File`, `Open Fold
 - Replace the content of `README.md` by your own content.
 - Replace the author name in [LICENSE.md](LICENSE.md) file to put your own name (it's all right, you have my blessing!)
 
+## About `MVRScript`
+
+The plugin is really a Unity [MonoBehavior](https://docs.unity3d.com/ScriptReference/MonoBehaviour.html), which means you can use methods like `Update`, `FixedUpdate`, `OnEnable`, `OnDisable` and `OnDestroy`. `Init` however is called by Virt-A-Mate.
+
+Keep in mind however that `OnEnable` will be called _before_ `Init`.
+
 ## Validate locally
 
-You can run `dotnet build` in the plugin folder, and it'll show you any compilation errors. This is faster than going in VaM to do so!
+You can run `dotnet build` in the plugin folder, and it'll show you any compilation errors. This is faster than going in VaM to do so! I recommend installing .NET 5 or more recent.
 
 ## Package var using GitHub Actions
 
